@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PUrify;
+using Purify;
 
 namespace HelloPUrify
 {
@@ -10,6 +11,10 @@ namespace HelloPUrify
     {
         static void Main(string[] args)
         {
+			var u = new Uri("http://localhost:1234/my-path").Purify();
+
+			var up = u.PathAndQuery;
+
             string uriString = "http://www.myapi.com/%2F?Foo=Bar%2F#frag";
             var uri = new Uri(uriString);
             Console.WriteLine("Uri String\n\t" + uriString);

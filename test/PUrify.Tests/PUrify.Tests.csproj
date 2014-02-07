@@ -63,6 +63,7 @@
     <Compile Include="PurifyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UriInfoTest.cs" />
+    <Compile Include="MonoPurifierFacts.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\PUrify\PUrify.csproj">
