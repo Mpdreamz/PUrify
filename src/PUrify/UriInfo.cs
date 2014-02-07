@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Purify
 {
-	internal class UriInfo
+    internal class UriInfo
     {
         public string Path { get; private set; }
         public string Query { get; private set; }

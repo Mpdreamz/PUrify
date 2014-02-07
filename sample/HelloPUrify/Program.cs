@@ -11,15 +11,11 @@ namespace HelloPUrify
     {
         static void Main(string[] args)
         {
-			var u = new Uri("http://localhost:1234/my-path").Purify();
-
-			var up = u.PathAndQuery;
-
             string uriString = "http://www.myapi.com/%2F?Foo=Bar%2F#frag";
             var uri = new Uri(uriString);
             Console.WriteLine("Uri String\n\t" + uriString);
             Console.WriteLine("\nUri Before PUrify:");
-            ShowUriDetails(uri);           
+            ShowUriDetails(uri);
             uri.Purify();
             Console.WriteLine("\nUri After PUrify:");
             ShowUriDetails(uri);

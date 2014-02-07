@@ -28,17 +28,17 @@ namespace PUrify
 
         public void Purify(Uri uri)
         {
-			//UriInfo will throw on Path/Host/Query access if the uri is Relative.
-			if (!uri.IsAbsoluteUri)
-				return;
+            //UriInfo will throw on Path/Host/Query access if the uri is Relative.
+            if (!uri.IsAbsoluteUri)
+                return;
             var source = (string)mono_sourceField.GetValue(uri);
             mono_cachedToStringField.SetValue(uri, source);
-            
 
-			mono_cachedAbsoluteUriField.SetValue(uri, source);
+
+            mono_cachedAbsoluteUriField.SetValue(uri, source);
             var uriInfo = new UriInfo(uri, source);
             mono_pathField.SetValue(uri, uriInfo.Path);
             mono_queryField.SetValue(uri, uriInfo.Query);
         }
-	}	
+    }
 }
